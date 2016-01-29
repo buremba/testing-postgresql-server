@@ -4,7 +4,7 @@
 
 # http://www.enterprisedb.com/products-services-training/pgbindownload
 
-VERSION=9.3.5-1
+VERSION=9.4.5
 BASEURL="http://get.enterprisedb.com/postgresql"
 
 TAR=tar
