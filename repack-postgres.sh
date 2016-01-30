@@ -4,7 +4,7 @@
 
 # http://www.enterprisedb.com/products-services-training/pgbindownload
 
-VERSION=9.4.5-1
+VERSION=9.4.5-3
 BASEURL="http://get.enterprisedb.com/postgresql"
 
 TAR=tar
@@ -55,7 +55,6 @@ $TAR -czf $OLDPWD/$RESOURCES/postgresql-Mac_OS_X-x86_64.tar.gz \
   lib/libxml2.2.dylib \
   lib/libssl.1.0.0.dylib \
   lib/libcrypto.1.0.0.dylib \
-  lib/libuuid.16.dylib \
   lib/postgresql/*.so \
   bin/initdb \
   bin/pg_ctl \
