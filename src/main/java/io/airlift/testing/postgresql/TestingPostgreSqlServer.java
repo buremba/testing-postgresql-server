@@ -64,9 +64,18 @@ public final class TestingPostgreSqlServer
         statement.execute(sql);
     }
 
-    public EmbeddedPostgreSql getServer()
+    public void execute(String query)
+            throws SQLException
     {
-        return server;
+        try (Connection connection = server.getPostgresDatabase()) {
+            try (Statement statement = connection.createStatement()) {
+                execute(statement, format(query, user));
+            }
+        }
+        catch (Exception e) {
+            server.close();
+            throw e;
+        }
     }
 
     @Override
