@@ -64,6 +64,11 @@ public final class TestingPostgreSqlServer
         statement.execute(sql);
     }
 
+    public EmbeddedPostgreSql getServer()
+    {
+        return server;
+    }
+
     @Override
     public void close()
             throws IOException
