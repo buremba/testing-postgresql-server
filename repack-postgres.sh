@@ -4,7 +4,7 @@
 
 # http://www.enterprisedb.com/products-services-training/pgbindownload
 
-VERSION=10.1
+VERSION=10.1-1
 BASEURL="http://get.enterprisedb.com/postgresql"
 
 TAR=tar
@@ -51,8 +51,10 @@ unzip -q -d $PACKDIR $OSX_DIST
 pushd $PACKDIR/pgsql
 $TAR -czf $OLDPWD/$RESOURCES/postgresql-Mac_OS_X-x86_64.tar.gz \
   share/postgresql \
-  lib/libiconv.2.dylib \
   lib/libxml2.2.dylib \
+  lib/libicuuc.57.dylib \
+  lib/libicudata.57.dylib \
+  lib/libicui18n.57.dylib \
   lib/libssl.1.0.0.dylib \
   lib/libcrypto.1.0.0.dylib \
   lib/postgresql/*.so \

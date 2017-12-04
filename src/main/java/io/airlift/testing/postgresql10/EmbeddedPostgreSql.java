@@ -11,7 +11,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.airlift.testing.postgresql;
+package io.airlift.testing.postgresql10;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Throwables;
@@ -80,7 +80,6 @@ final class EmbeddedPostgreSql
         postgresConfig = ImmutableMap.<String, String>builder()
                 .put("timezone", "UTC")
                 .put("synchronous_commit", "off")
-                .put("checkpoint_segments", "64")
                 .put("max_connections", "300")
                 .build();
 
@@ -176,8 +175,9 @@ final class EmbeddedPostgreSql
         }
 
         Process process = new ProcessBuilder(args)
-                .redirectErrorStream(true)
-                .redirectOutput(ProcessBuilder.Redirect.INHERIT)
+//                .redirectErrorStream(true)
+                .redirectError(new File("/tmp/test.log"))
+//                .redirectOutput(ProcessBuilder.Redirect.INHERIT)
                 .start();
 
         log.info("postmaster started on port %s. Waiting up to %s for startup to finish.", port, PG_STARTUP_WAIT);
