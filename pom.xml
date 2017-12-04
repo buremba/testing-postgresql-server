@@ -9,8 +9,8 @@
 
 
     <groupId>org.rakam</groupId>
-    <artifactId>testing-postgresql-server</artifactId>
-    <version>10-1.1-SNAPSHOT</version>
+    <artifactId>testing-postgresql10-server</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>testing-postgresql-server</name>
