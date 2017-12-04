@@ -19,12 +19,6 @@
 
     <inceptionYear>2015</inceptionYear>
 
-    <scm>
-        <connection>scm:git:git@github.com/buremba/testing-postgresql-server.git</connection>
-        <url>https://github.com/buremba/testing-postgresql-server</url>
-        <tag>HEAD</tag>
-    </scm>
-
     <properties>
         <air.check.skip-pmd>true</air.check.skip-pmd>
         <air.version>0.117</air.version>
